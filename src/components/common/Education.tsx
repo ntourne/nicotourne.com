@@ -2,7 +2,6 @@ import {
   Flex,
   Box,
   Text,
-  Link,
   Stack,
   Accordion,
   AccordionItem,
@@ -13,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { Section } from "@components/layout";
 import { EDUCATION } from "@data/index";
-import { Markdown } from ".";
+import { Markdown, WebsiteButtons } from ".";
 import Image from "next/image";
 
 export const Education = () => {
@@ -50,17 +49,7 @@ const EducationBox = ({ education }: any) => {
           )}
           <Box ml={4}>
             <Text fontWeight="bold">{education.degree}</Text>
-            <Text fontSize="0.9em">
-              {education.school.url ? (
-                <Link href={education.school.url} isExternal>
-                  {education.school?.name}
-                </Link>
-              ) : (
-                <Text as="span" fontWeight="bold">
-                  {education.school?.name}
-                </Text>
-              )}
-            </Text>
+            <Text as="span">{education.school?.name}</Text>
             <Text
               fontSize="0.9em"
               color={useColorModeValue("gray.700", "white.700")}
@@ -75,6 +64,10 @@ const EducationBox = ({ education }: any) => {
       {education.description && (
         <AccordionPanel px={0} pb={4}>
           <Markdown>{education.description}</Markdown>
+
+          {education.websites && (
+            <WebsiteButtons websites={education.websites} />
+          )}
         </AccordionPanel>
       )}
     </Flex>

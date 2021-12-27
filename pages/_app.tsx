@@ -20,6 +20,7 @@ const theme = extendTheme({
       },
       a: {
         fontWeight: "bold",
+        /* color: "#080a87 !important", */
       },
     }),
   },
