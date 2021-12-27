@@ -222,7 +222,7 @@ export const EDUCATION = [
   {
     key: "unicen-mba",
     imageUrl: "/img/education/unicen.jpeg",
-    degree: "System Engineering",
+    degree: "MBA",
     school: {
       name: "Universidad Nacional del Centro de la Pcia de Buenos Aires",
     },
@@ -243,7 +243,7 @@ Thesis: "Microblogging Investor Sentiment as a Contrarian Indicator in Stock Mar
   {
     key: "unicen-soft-engineer",
     imageUrl: "/img/education/unicen.jpeg",
-    degree: "MBA",
+    degree: "System Engineering",
     school: {
       name: "Universidad Nacional del Centro de la Pcia de Buenos Aires",
     },
