@@ -7,7 +7,8 @@ import { SocialMedia } from './SocialMedia';
 import { Skills } from './Skills';
 import { Education } from './Education';
 import { WebsiteTech } from './WebsiteTech';
+import { WebsiteButtons } from './WebsiteButtons';
 import { Markdown } from './Markdown';
 import { Language } from './Language';
 
-export { About, ContactForm, Experience, Header, HeadingCard, SocialMedia, Skills, Education, WebsiteTech, Markdown, Language };
+export { About, ContactForm, Experience, Header, HeadingCard, SocialMedia, Skills, Education, WebsiteTech, Markdown, Language, WebsiteButtons };

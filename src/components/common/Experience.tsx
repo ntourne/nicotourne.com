@@ -2,7 +2,6 @@ import {
   Flex,
   Box,
   Text,
-  Link,
   Stack,
   Accordion,
   AccordionItem,
@@ -13,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { Section } from "@components/layout";
 import { EXPERIENCES } from "@data/index";
-import { Markdown } from ".";
+import { Markdown, WebsiteButtons } from ".";
 import Image from "next/image";
 
 export const Experience = () => {
@@ -51,17 +50,7 @@ const ExperienceBox = ({ experience }: any) => {
 
           <Box ml={4}>
             <Text fontWeight="bold">{experience.title}</Text>
-            <Text fontSize="0.9em">
-              {experience.company.url ? (
-                <Link href={experience.company.url} isExternal>
-                  {experience.company?.name}
-                </Link>
-              ) : (
-                <Text as="span" fontWeight="bold">
-                  {experience.company?.name}
-                </Text>
-              )}
-            </Text>
+            <Text as="span">{experience.company?.name}</Text>
             <Text
               fontSize="0.9em"
               color={useColorModeValue("gray.700", "white.700")}
@@ -76,6 +65,10 @@ const ExperienceBox = ({ experience }: any) => {
       {experience.description && (
         <AccordionPanel px={0} pb={4}>
           <Markdown>{experience.description}</Markdown>
+
+          {experience.websites && (
+            <WebsiteButtons websites={experience.websites} />
+          )}
         </AccordionPanel>
       )}
     </Flex>

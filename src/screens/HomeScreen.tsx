@@ -15,7 +15,6 @@ export const HomeScreen = () => {
     <Stack spacing={8} pt={4}>
       <Header />
       <HeadingCard />
-      {/* <SocialMedia /> */}
       <About />
       <Experience />
       <Skills />

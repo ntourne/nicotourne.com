@@ -1,4 +1,4 @@
-import { Flex, Box, Container, Stack } from "@chakra-ui/react";
+import { Flex, Container, Stack } from "@chakra-ui/react";
 
 export const Layout = (props: { children: any }) => {
   const { children } = props;

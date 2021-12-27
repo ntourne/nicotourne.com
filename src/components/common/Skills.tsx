@@ -17,11 +17,13 @@ export const Skills = () => {
 const SkillBox = ({ skill }: any) => {
   return (
     <Flex direction="column">
-      <Text fontWeight="bold">{skill.label}</Text>
-      <Text fontSize="0.9em">{skill.description}</Text>
+      <Text fontWeight="bold" mb={1}>
+        {skill.label}
+      </Text>
+      <Text mb={1}>{skill.description}</Text>
       {skill.technologies && (
-        <Flex fontSize="0.9em" direction={{ base: "column", sm: "row" }}>
-          Technologies: {skill.technologies.join(", ")}
+        <Flex direction={{ base: "column", sm: "row" }}>
+          * Technologies: {skill.technologies.join(", ")}
         </Flex>
       )}
     </Flex>
