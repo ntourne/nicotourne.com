@@ -6,16 +6,20 @@ export const WebsiteButtons = ({ websites }: any) => {
   if (!websites) return <></>;
 
   return (
-    <Flex direction="column" width={{ base: "100%", sm: "auto" }} align="left">
+    <Flex direction="column" align="left">
       {websites.map((website: any) => (
-        <Button
-          key={website.url}
-          as="span"
-          mb={1}
-          rightIcon={<FaExternalLinkAlt />}
-        >
-          <Link href={website.url}>{website.label}</Link>
-        </Button>
+        <Link key={website.url} href={website.url} passHref>
+          <a target="_blank" rel="noreferrer">
+            <Button
+              as="span"
+              mb={1}
+              width={{ base: "100%", sm: "auto" }}
+              rightIcon={<FaExternalLinkAlt />}
+            >
+              {website.label}
+            </Button>
+          </a>
+        </Link>
       ))}
     </Flex>
   );
