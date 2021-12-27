@@ -251,7 +251,7 @@ Thesis: "Microblogging Investor Sentiment as a Contrarian Indicator in Stock Mar
       { label: "exa.unicen.edu.ar", url: "https://exa.unicen.edu.ar/" },
       {
         label: "White Paper",
-        url: "https://www.sciencedirect.com/science/article/abs/pii/S0957417412003326](https://www.sciencedirect.com/science/article/abs/pii/S0957417412003326",
+        url: "https://www.sciencedirect.com/science/article/abs/pii/S0957417412003326",
       },
     ],
     period: {
