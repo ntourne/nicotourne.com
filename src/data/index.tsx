@@ -17,6 +17,7 @@ Full Stack Engineer with a solid experience on front-end and back-end technologi
 Also, he is a Software Engineer and MBA.
 `,
   avatarUrl: "/img/about/profile-avatar.jpeg",
+  email: "nicotourne@gmail.com",
 };
 
 export const SOCIAL_MEDIA = [

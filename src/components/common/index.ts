@@ -1,5 +1,6 @@
 import { About } from './About';
 import { ContactForm } from './ContactForm';
+import { ContactEmail } from './ContactEmail';
 import { Experience } from './Experience';
 import { Header } from './Header';
 import { HeadingCard } from './HeadingCard';
@@ -11,4 +12,4 @@ import { WebsiteButtons } from './WebsiteButtons';
 import { Markdown } from './Markdown';
 import { Language } from './Language';
 
-export { About, ContactForm, Experience, Header, HeadingCard, SocialMedia, Skills, Education, WebsiteTech, Markdown, Language, WebsiteButtons };
+export { About, ContactForm, ContactEmail, Experience, Header, HeadingCard, SocialMedia, Skills, Education, WebsiteTech, Markdown, Language, WebsiteButtons };

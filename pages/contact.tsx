@@ -1,9 +1,10 @@
 import Head from "next/head";
 import { Stack } from "@chakra-ui/react";
 import { Layout } from "@components/layout";
-import { HomeScreen } from "@screens/index";
+import { ContactScreen } from "@screens/index";
 import { PROFILE } from "@data/index";
-export default function Home() {
+
+export default function Contact() {
   return (
     <>
       <Head>
@@ -14,12 +15,12 @@ export default function Home() {
       </Head>
 
       <Stack spacing={2}>
-        <HomeScreen />
+        <ContactScreen />
       </Stack>
     </>
   );
 }
 
-Home.menu = "home";
+Contact.menu = "home";
 
-Home.getLayout = (page: any) => <Layout>{page}</Layout>;
+Contact.getLayout = (page: any) => <Layout>{page}</Layout>;

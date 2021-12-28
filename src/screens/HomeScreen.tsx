@@ -8,6 +8,7 @@ import {
   Education,
   Language,
   WebsiteTech,
+  ContactForm,
 } from "@components/common";
 
 export const HomeScreen = () => {
