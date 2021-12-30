@@ -82,11 +82,11 @@ His main goal is to continue to position BeeReal as an innovation company.
       },
     ],
     description: `
-Nicolas participates as teacher of different topics at UNICEN.
+Nicolas participates as a teacher of different topics at UNICEN.
     
 **Technology Trends @ Licenciatura en Gestión Tecnológica** (Aug 2021 - Present)
 
-This is a subject at the Economics degree. He had to research about different topics related to A.I. and robotics, fintech, blockchain and bitcoin, IoT, etc
+This is a subject for an Economics degree. He had to research different topics related to A.I. and robotics, fintech, blockchain and bitcoin, IoT, etc
 
 **FrontEnd Development @ Diplomatura de User Experience** (Oct 2017 - Dec 2020)
 
@@ -140,7 +140,7 @@ Update: This company was shutted down.
     description: `
 Working at Scale Options - a company which offers consulting to the biggest social peer lending company from the US, LendingClub (NYSE: LC).
 
-Nicolás moved to China to manage and give training/knowledge transfer to a new team of 6 people. The main task was to overcome the different working modes between China and US, having in mind a rapid transition.
+Nicolás moved to China to manage and give training/knowledge transfer to a new team of 6 people. The main task was to overcome the different working modes between China and the US, having in mind a rapid transition.
     `,
   },
   {
@@ -152,12 +152,12 @@ Nicolás moved to China to manage and give training/knowledge transfer to a new 
       location: "Argentina",
     },
     period: {
-      start: "Jul 2019",
+      start: "Jul 2009",
       end: "Jul 2012",
     },
     websites: [{ label: "temperies.com", url: "http://temperies.com/" }],
     description: `
-Temperies is an IT company, specialized in both consulting and software developing areas. Work position: Database department leader. Team leader/software developer in Java/PHP-based projects. At the database department, Nicolas has the responsibility to organize not only the team but also the training plan of the company, evaluate new projects, offers internal consulting and researching about different approach like Big Data and NoSQL databases.
+Temperies is an IT company, specialized in both consulting and software developing areas. Work position: Database department leader. Team leader/software developer in Java/PHP-based projects. At the database department, Nicolas has the responsibility to organize not only the team but also the training plan of the company, evaluate new projects, offer internal consulting and research about different approaches like Big Data and NoSQL databases.
 He worked on the management and development process from various projects based on PHP and Java technologies.
 
 Also, working for Lending Club (NYSE:LC). Lending Club is a person-to-person lending website that pairs borrowers and lenders through a matching system that combines a search algorithm, credit decisioning and social networking. Lending Club is headquartered in Sunnyvale, California.
@@ -202,7 +202,8 @@ Update: This company was shutted down.
       { label: "411.ca", url: "https://411.ca/" },
     ],
     description: `
-Working at different projects in the company.
+
+    IntelligenX is a US company which offers consulting & development to yellow pages companies around the world. Nicolas worked at different projects in the company.
     
 **Team Leader of 411.ca, Canada's company.**
 
