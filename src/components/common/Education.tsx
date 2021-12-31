@@ -48,7 +48,9 @@ const EducationBox = ({ education }: any) => {
             </Box>
           )}
           <Box ml={4}>
-            <Text fontWeight="bold">{education.degree}</Text>
+            <Text as="h3" fontSize="1.1em" fontWeight="bold">
+              {education.degree}
+            </Text>
             <Text as="span">{education.school?.name}</Text>
             <Text
               fontSize="0.9em"
