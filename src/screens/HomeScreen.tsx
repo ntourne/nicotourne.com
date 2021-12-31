@@ -17,8 +17,8 @@ export const HomeScreen = () => {
       <Header />
       <HeadingCard />
       <About />
-      <Experience />
       <Skills />
+      <Experience />
       <Education />
       <Language />
       <WebsiteTech />

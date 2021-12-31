@@ -49,7 +49,9 @@ const ExperienceBox = ({ experience }: any) => {
           )}
 
           <Box ml={4}>
-            <Text fontWeight="bold">{experience.title}</Text>
+            <Text as="h3" fontSize="1.1em" fontWeight="bold">
+              {experience.title}
+            </Text>
             <Text as="span">{experience.company?.name}</Text>
             <Text
               fontSize="0.9em"

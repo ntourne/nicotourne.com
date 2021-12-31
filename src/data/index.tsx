@@ -1,10 +1,5 @@
-import {
-  FaLinkedin,
-  FaGithub,
-  FaTwitter,
-  FaJsSquare,
-  FaNetworkWired,
-} from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaTwitter, FaJsSquare } from "react-icons/fa";
+import { BiNetworkChart } from "react-icons/bi";
 
 export const PROFILE = {
   name: "Nicolas Tourne",
@@ -12,7 +7,7 @@ export const PROFILE = {
   about: `
 Experience on creating and managing highly technical web/mobile applications & development teams spanning multiple projects and platforms.
 
-Full Stack Engineer with a solid experience on front-end and back-end technologies. Right now he is moving to Blockchain/Web3 space.
+Full Stack Engineer with a solid experience on front-end and back-end technologies. Right now moving to Blockchain/Web3 space.
 
 Also, he is a Software Engineer and MBA.
 `,
@@ -270,7 +265,8 @@ export const SKILLS = [
   {
     icon: <FaJsSquare />,
     label: "Web Full Stack",
-    description: "Development of web applications using MERN and MEAN stacks.",
+    description:
+      "Development of web applications using MERN and MEAN stacks. Experience in all the phases of a digital product since the discovery (interacting with customers and UX designers) and delivery (architecture definition, development and release to production). Most of the time playing the tech lead role.",
     technologies: [
       "JavaScript / TypeScript",
       "React",
@@ -280,15 +276,20 @@ export const SKILLS = [
       "RESTful APIs",
       "Jest",
       "GCP / Heroku / Vercel / Firebase / Serverless",
-      "Chakra UI, Tailwind CSS, Bootstrap"
+      "Chakra UI / Tailwind CSS / Bootstrap",
     ],
   },
   {
-    icon: <FaNetworkWired />,
+    icon: <BiNetworkChart />,
     label: "Blockchain / Web3",
     description:
-      "Development of Web3 applications working on web interfaces and smart contracts. Interested in the NFT ecosystem and the impact it can do in many industries.",
-    technologies: ["Ethereum / Polygon / BSC", "Solidity", "hardhat / truffle", "ethers.js / web3.js"],
+      "Development of Web3 applications working on web interfaces and smart contracts on EVM (Ethereum). Interested in the NFT ecosystem and the impact it can have in many industries.",
+    technologies: [
+      "Solidity",
+      "hardhat / truffle",
+      "ethers.js / web3.js",
+      "OpenZeppelin",
+    ],
   },
 ];
 
