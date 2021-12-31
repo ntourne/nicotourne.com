@@ -275,18 +275,20 @@ export const SKILLS = [
       "JavaScript / TypeScript",
       "React",
       "Next.js",
-      "Angular",
-      "Node / Express",
-      "MySQL / MongoDB / Firestore",
-      "Serverless",
+      "Node.js / Express.js",
+      "SQL / MySQL / MongoDB / Firestore",
+      "RESTful APIs",
+      "Jest",
+      "GCP / Heroku / Vercel / Firebase / Serverless",
+      "Chakra UI, Tailwind CSS, Bootstrap"
     ],
   },
   {
     icon: <FaNetworkWired />,
     label: "Blockchain / Web3",
     description:
-      "Development of Web3 applications working on web interfaces and smart contracts.",
-    technologies: ["Solidity", "hardhat / truffle", "ethers.js / web3.js"],
+      "Development of Web3 applications working on web interfaces and smart contracts. Interested in the NFT ecosystem and the impact it can do in many industries.",
+    technologies: ["Ethereum / Polygon / BSC", "Solidity", "hardhat / truffle", "ethers.js / web3.js"],
   },
 ];
 
