@@ -1,4 +1,5 @@
-import "../styles/globals.css";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 import type { AppProps } from "next/app";
 import { NextPage } from "next";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
@@ -32,7 +33,22 @@ function MyApp(props: AppProps) {
     pageProps,
   }: { Component: NextApplicationPage; pageProps: any } = props;
 
+  const router = useRouter();
+
   const getLayout = Component.getLayout || ((page: any) => page);
+
+  useEffect(() => {
+    const handleRouteChange = (url: string) => {
+      const _window: any = window;
+      _window.gtag("config", process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, {
+        page_path: url,
+      });
+    };
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
 
   return (
     <ChakraProvider theme={theme}>
