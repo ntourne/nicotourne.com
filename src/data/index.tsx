@@ -275,8 +275,8 @@ export const SKILLS = [
       "SQL / MySQL / MongoDB / Firestore",
       "RESTful APIs",
       "Jest",
-      "GCP / Heroku / Vercel / Firebase / Serverless",
-      "Chakra UI / Tailwind CSS / Bootstrap",
+      "GCP / Heroku / Vercel / Firebase",
+      "Chakra UI / Tailwind CSS",
     ],
   },
   {
