@@ -1,27 +1,23 @@
-import { Stack } from "@chakra-ui/react";
-import {
-  HeadingCard,
-  About,
-  Experience,
-  Header,
-  Skills,
-  Education,
-  Language,
-  WebsiteTech,
-  ContactForm,
-} from "@components/common";
+import { Stack, Container } from "@chakra-ui/react"
+import { HeadingCard, About, Header } from "@components/common"
+import { Card } from "@components/layout"
 
 export const HomeScreen = () => {
   return (
-    <Stack spacing={8} pt={4}>
-      <Header />
-      <HeadingCard />
-      <About />
-      <Skills />
-      <Experience />
-      <Education />
-      <Language />
-      <WebsiteTech />
-    </Stack>
-  );
-};
+    <Container
+      maxW="container.xl"
+      h="100vh"
+      py={20}
+      position="relative"
+      centerContent
+    >
+      <Card margin="auto">
+        <Stack spacing={10}>
+          <Header />
+          <HeadingCard />
+          <About />
+        </Stack>
+      </Card>
+    </Container>
+  )
+}

@@ -1,7 +1,6 @@
-import { Flex, Box, Heading, Spacer } from "@chakra-ui/react";
-import Image from "next/image";
-import { PROFILE } from "@data/index";
-import { ContactEmail } from ".";
+import { Flex, Box, Heading, Spacer, Image } from "@chakra-ui/react"
+import { PROFILE } from "@data/index"
+import { ContactEmail } from "."
 
 export const HeadingCard = () => {
   return (
@@ -36,18 +35,17 @@ export const HeadingCard = () => {
         <ContactEmail />
       </Box>
     </Flex>
-  );
-};
+  )
+}
 
 const Avatar = () => {
   return (
     <Image
       src={PROFILE.avatarUrl}
+      borderRadius="8px"
       alt={`Avatar from ${PROFILE.name}`}
-      className="rounded-full"
       height="80px"
       width="80px"
-      layout="fixed"
     />
-  );
-};
+  )
+}
