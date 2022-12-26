@@ -1,12 +1,12 @@
-import { useState } from "react";
+import { useState } from "react"
 
-import { Flex, useColorMode, Button, Spacer, Box } from "@chakra-ui/react";
-import { SocialMedia } from "@components/common";
-import { FaSun, FaMoon } from "react-icons/fa";
-import { ContactEmail } from ".";
+import { Flex, useColorMode, Button, Spacer, Box } from "@chakra-ui/react"
+import { SocialMedia } from "@components/common"
+import { FaSun, FaMoon } from "react-icons/fa"
+import { ContactEmail } from "."
 
 export const Header = ({ isBack }: any) => {
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode, toggleColorMode } = useColorMode()
   return (
     <Flex direction="row" align="center">
       {/*
@@ -38,13 +38,9 @@ export const Header = ({ isBack }: any) => {
       <Box display={{ base: "none", sm: "block" }}>
         <ContactEmail />
       </Box>
-      <Button
-        onClick={toggleColorMode}
-        alt="Switch light/dark mode"
-        aria-label="Switch light/dark mode"
-      >
+      <Button onClick={toggleColorMode} aria-label="Switch light/dark mode">
         {colorMode === "light" ? <FaMoon /> : <FaSun />}
       </Button>
     </Flex>
-  );
-};
+  )
+}

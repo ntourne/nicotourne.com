@@ -1,19 +1,21 @@
-import { FaLinkedin, FaGithub, FaTwitter, FaJsSquare } from "react-icons/fa";
-import { BiNetworkChart } from "react-icons/bi";
+import { FaLinkedin, FaGithub, FaTwitter, FaJsSquare } from "react-icons/fa"
+import { BiNetworkChart } from "react-icons/bi"
 
 export const PROFILE = {
   name: "Nicolas Tourne",
-  title: "Software Engineer",
+  title: "I build stuff",
   about: `
-Experience on creating and managing highly technical web/mobile applications & development teams spanning multiple projects and platforms.
+Nicolas is a guy with experience on creating and managing highly technical web applications & development teams spanning multiple projects and platforms.
 
-Full Stack Engineer with a solid experience on front-end and back-end technologies. Right now moving to Blockchain/Web3 space.
+CTO and Co-Founder at [BeeReal](https://beerealit.com). This is a digital agency with focus on scalable and user-friendly products. At BeeReal, he worked with many different companies helping them to launch their digital products since visioning up-to delivery.
 
-Also, he is a Software Engineer and MBA.
+Right now, he is working as a Web3 engineer at [Tally](https://www.tally.xyz), which is a platform for on-chain decentralized organizations (DAOs).
+
+Also, he is a Software Engineer and MBA (UNICEN). He is currently based in Argentina.
 `,
   avatarUrl: "/img/about/profile-avatar.jpeg",
   email: "nicotourne@gmail.com",
-};
+}
 
 export const SOCIAL_MEDIA = [
   {
@@ -31,7 +33,7 @@ export const SOCIAL_MEDIA = [
     url: "https://twitter.com/nicotourne",
     icon: <FaTwitter />,
   },
-];
+]
 
 export const EXPERIENCES = [
   {
@@ -213,7 +215,7 @@ It's the underlying distributed management framework and administrative tools an
 Technologies: J2EE / JavaServer Faces
     `,
   },
-];
+]
 
 export const EDUCATION = [
   {
@@ -259,7 +261,7 @@ Thesis: "Microblogging Investor Sentiment as a Contrarian Indicator in Stock Mar
 Thesis: "Web Pages Classification using Social Bookmarks"
 `,
   },
-];
+]
 
 export const SKILLS = [
   {
@@ -291,7 +293,7 @@ export const SKILLS = [
       "OpenZeppelin",
     ],
   },
-];
+]
 
 export const LANGUAGES = [
   {
@@ -309,4 +311,4 @@ export const LANGUAGES = [
     label: "Portuguese",
     description: "Elementary proficiency",
   },
-];
+]
