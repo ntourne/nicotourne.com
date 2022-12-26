@@ -11,7 +11,8 @@ export const Card: FC<Props & BoxProps> = ({ children, ...props }) => {
       bg={useColorModeValue("white", "gray.900")}
       boxShadow={"2xl"}
       rounded={"lg"}
-      p={6}
+      py={6}
+      px={8}
       {...props}
     >
       {children}

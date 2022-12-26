@@ -6,8 +6,9 @@ export const HomeScreen = () => {
   return (
     <Container
       maxW="container.xl"
+      px={0}
       h="100vh"
-      py={20}
+      py={4}
       position="relative"
       centerContent
     >
