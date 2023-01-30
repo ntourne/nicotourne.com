@@ -1,5 +1,5 @@
-import { Stack, Container } from "@chakra-ui/react"
-import { HeadingCard, About, Header } from "@components/common"
+import { Stack, Container, Divider } from "@chakra-ui/react"
+import { HeadingCard, About, Header, Articles } from "@components/common"
 import { Card } from "@components/layout"
 
 export const HomeScreen = () => {
@@ -13,10 +13,12 @@ export const HomeScreen = () => {
       centerContent
     >
       <Card margin="auto">
-        <Stack spacing={10}>
+        <Stack spacing={6}>
           <Header />
           <HeadingCard />
           <About />
+          <Divider />
+          <Articles />
         </Stack>
       </Card>
     </Container>

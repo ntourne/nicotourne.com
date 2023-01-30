@@ -8,7 +8,7 @@ import { ContactEmail } from "."
 export const Header = ({ isBack }: any) => {
   const { colorMode, toggleColorMode } = useColorMode()
   return (
-    <Flex direction="row" align="center">
+    <Flex direction="row" align="center" mb={{ base: 2, sm: 6 }}>
       {/*
       {isBack ? (
         <Link href="/" passHref>
