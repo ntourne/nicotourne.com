@@ -16,16 +16,19 @@ const theme = extendTheme({
   styles: {
     global: (props: any) => ({
       body: {
-        fontFamily:
-          "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;",
         lineHeight: "base",
-        bg: mode("gray.200", "gray.600")(props),
+        bg: mode("gray.100", "gray.600")(props),
       },
       a: {
         fontWeight: "bold",
         /* color: "#080a87 !important", */
       },
     }),
+  },
+  fonts: {
+    heading:
+      "Roboto, Lato, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;",
+    body: "Roboto, Lato, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;",
   },
 })
 

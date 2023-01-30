@@ -9,7 +9,6 @@ export const Card: FC<Props & BoxProps> = ({ children, ...props }) => {
     <Box
       w={"full"}
       bg={useColorModeValue("white", "gray.900")}
-      boxShadow={"2xl"}
       rounded={"lg"}
       py={6}
       px={8}

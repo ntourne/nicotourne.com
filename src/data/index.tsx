@@ -3,9 +3,9 @@ import { BiNetworkChart } from "react-icons/bi"
 
 export const PROFILE = {
   name: "Nicolas Tourne",
-  title: "I build stuff",
+  title: "Web3 Engineer (and curious)",
   about: `
-Nicolas is a guy with experience on creating and managing highly technical web applications & development teams spanning multiple projects and platforms.
+Nicolas is a software engineer with experience on creating and managing highly technical web applications & development teams spanning multiple projects and platforms.
 
 CTO and Co-Founder at [BeeReal](https://beerealit.com). This is a digital agency with focus on scalable and user-friendly products. At BeeReal, he worked with many different companies helping them to launch their digital products since visioning up-to delivery.
 
