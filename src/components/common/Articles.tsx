@@ -13,7 +13,7 @@ export const Articles = () => {
           key={`post-${idx}`}
           textAlign="left"
           width="100%"
-          mb={1}
+          mb={{ base: 3, sm: 1 }}
         >
           <Link href={post.url} isExternal aria-label={post.title}>
             <Text fontWeight="bold">{post.title}</Text>
