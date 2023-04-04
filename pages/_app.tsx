@@ -3,7 +3,6 @@ import { useRouter } from "next/router"
 import type { AppProps } from "next/app"
 import { NextPage } from "next"
 import { ChakraProvider, extendTheme } from "@chakra-ui/react"
-import { mode } from "@chakra-ui/theme-tools"
 
 export type NextApplicationPage<P = any, IP = P> = NextPage<P, IP> & {
   requireAuth?: boolean
@@ -14,10 +13,10 @@ export type NextApplicationPage<P = any, IP = P> = NextPage<P, IP> & {
 // 2. Call `extendTheme` and pass your custom values
 const theme = extendTheme({
   styles: {
-    global: (props: any) => ({
+    global: () => ({
       body: {
         lineHeight: "base",
-        bg: mode("gray.100", "gray.600")(props),
+        // bg: mode("gray.100", "gray.600")(props),
       },
       a: {
         fontWeight: "bold",
