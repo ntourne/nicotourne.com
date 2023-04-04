@@ -14,7 +14,7 @@ const Home = () => {
         <meta name="description" content={PROFILE.about} />
       </Head>
 
-      <Stack spacing={2} pb={{ base: 20, sm: 0 }}>
+      <Stack spacing={2} pb={{ base: 20, sm: 6 }}>
         <HomeScreen />
       </Stack>
     </>

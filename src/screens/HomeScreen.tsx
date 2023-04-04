@@ -10,7 +10,7 @@ export const HomeScreen = () => {
       h="100vh"
       py={4}
       position="relative"
-      centerContent
+      // centerContent
     >
       <Card margin="auto">
         <Stack spacing={6}>
