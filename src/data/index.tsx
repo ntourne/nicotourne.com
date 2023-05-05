@@ -5,13 +5,17 @@ export const PROFILE = {
   name: "Nicolas Tourne",
   title: "Web3 Engineer (and curious)",
   about: `
-Nicolas is a software engineer with experience on creating and managing highly technical web applications & development teams spanning multiple projects and platforms.
+Hey 👋  Thanks for visiting my website.
 
-CTO and Co-Founder at [BeeReal](https://beerealit.com). This is a digital agency with focus on scalable and user-friendly products. At BeeReal, he worked with many different companies helping them to launch their digital products since visioning up-to delivery.
+I'm a software engineer with experience on creating and managing highly technical web applications & development teams spanning multiple projects and platforms.
 
-Right now, he is working as a Web3 engineer at [Tally](https://www.tally.xyz), which is a platform for on-chain decentralized organizations (DAOs).
+CTO and Co-Founder at [BeeReal](https://beerealit.com). This is a digital agency with focus on scalable and user-friendly products. At BeeReal, I worked with many different companies helping them to launch their digital products since visioning up-to delivery.
 
-Also, he is a Software Engineer and MBA (UNICEN). He is currently based in Argentina.
+Right now, I'm working as a Web3 engineer at [Tally](https://www.tally.xyz), which is a platform for on-chain decentralized organizations (DAOs).
+
+In the past, I co-founded [TidyMktr](https://www.youtube.com/watch?v=Jok0wo13cD4&ab_channel=LAUNCHConf), a digital marketing SaaS tool which was incubated by LAUNCH Incubator. And also [Buscarg](https://twitter.com/buscarg), a business directory site.
+
+Also, I'm a Software Engineer and MBA (UNICEN). Currently based in Argentina 🇦🇷
 `,
   avatarUrl: "/img/about/profile-avatar.jpeg",
   email: "nicotourne@gmail.com",
