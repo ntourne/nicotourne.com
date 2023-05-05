@@ -4,8 +4,8 @@ import { POSTS } from "@data/posts"
 export const Articles = () => {
   return (
     <Flex direction={"column"} flex="1" mt={12} mb={8}>
-      <Heading as="h3" fontSize={{ base: "1.1em", sm: "1.5em" }} mb={4}>
-        Articles
+      <Heading as="h3" fontSize={{ base: "1.1em", sm: "1.3em" }} mb={4}>
+        Articles ({`I don't write too often`})
       </Heading>
       {POSTS.map((post, idx) => (
         <Flex
