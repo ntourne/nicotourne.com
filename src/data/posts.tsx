@@ -1,5 +1,10 @@
 export const POSTS = [
   {
+    title: "Exploring Real World Assets (RWA)",
+    url: "https://medium.com/@nicotourne/exploring-real-world-assets-rwa-bridging-traditional-and-digital-economies-edaa73dc3816",
+    createdDate: "Apr 21, 2024",
+  },
+  {
     title:
       "Living on the Edge: How Computing’s New Frontier Is Closer Than You Think!",
     url: "https://medium.com/beereal/living-on-the-edge-how-computings-new-frontier-is-closer-than-you-think-a3f1d72f1a80",
