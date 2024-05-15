@@ -1,4 +1,5 @@
-import { FaLinkedin, FaGithub, FaTwitter, FaJsSquare } from "react-icons/fa"
+import { FaLinkedin, FaGithub, FaJsSquare } from "react-icons/fa"
+import { FaXTwitter } from "react-icons/fa6"
 import { BiNetworkChart } from "react-icons/bi"
 
 export const PROFILE = {
@@ -33,9 +34,9 @@ export const SOCIAL_MEDIA = [
     icon: <FaGithub />,
   },
   {
-    label: "Twitter",
-    url: "https://twitter.com/nicotourne",
-    icon: <FaTwitter />,
+    label: "X (Twitter)",
+    url: "https://x.com/nicotourne",
+    icon: <FaXTwitter />,
   },
 ]
 
