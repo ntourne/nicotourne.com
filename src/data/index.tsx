@@ -6,18 +6,18 @@ export const PROFILE = {
   name: "Nicolas Tourne",
   title: "Web3 Engineer (and curious)",
   about: `
-Hey 👋  Thanks for visiting my website.
+  Hey 👋  Thanks for visiting my website.
 
-I'm a software engineer with experience on creating and managing highly technical web applications & development teams spanning multiple projects and platforms.
+I'm a software engineer with experience in creating and managing highly technical web applications and development teams across multiple projects and platforms.
 
-CTO and Co-Founder at [BeeReal](https://beerealit.com). This is a digital agency with focus on scalable and user-friendly products. At BeeReal, I worked with many different companies helping them to launch their digital products since visioning up-to delivery.
+CTO and Co-Founder at [BeeReal](https://beerealit.com), a digital agency focused on scalable and user-friendly products. At BeeReal, I have worked with many different companies, helping them to launch their digital products from vision to delivery.
 
-Right now, I'm working as a Web3 engineer at [Tally](https://www.tally.xyz), which is a platform for on-chain decentralized organizations (DAOs).
+Currently, I'm working as a Web3 engineer at [Tally](https://www.tally.xyz), which is a platform for onchain decentralized organizations (DAOs).
 
-In the past, I co-founded [TidyMktr](https://www.youtube.com/watch?v=Jok0wo13cD4&ab_channel=LAUNCHConf), a digital marketing SaaS tool which was incubated by LAUNCH Incubator. And also [Buscarg](https://twitter.com/buscarg), a business directory site.
+In the past, I co-founded [TidyMktr](https://www.youtube.com/watch?v=Jok0wo13cD4&ab_channel=LAUNCHConf), a digital marketing SaaS tool that was incubated by LAUNCH Incubator, and [Buscarg](https://twitter.com/buscarg), a business directory site.
 
-Also, I'm a Software Engineer and MBA (UNICEN). Currently based in Argentina 🇦🇷
-`,
+Additionally, I am a Software Engineer with an MBA from UNICEN and a university professor. I am currently based in Argentina 🇦🇷
+  `,
   avatarUrl: "/img/about/profile-avatar.jpeg",
   email: "nicotourne@gmail.com",
 }
