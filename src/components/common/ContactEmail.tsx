@@ -1,48 +1,43 @@
-import { useState } from "react"
-import { InputGroup, Input, InputRightElement, Button } from "@chakra-ui/react"
 import { PROFILE } from "@data/index"
+import { useState } from "react"
 import { FaEnvelope } from "react-icons/fa"
-import { useToast, useClipboard } from "@chakra-ui/react"
+import { toast } from "sonner"
 
 export const ContactEmail = () => {
   const [displayEmail, setDisplayEmail] = useState(false)
-  const toast = useToast()
-
-  const { onCopy } = useClipboard(PROFILE.email)
 
   const handleOnCopy = () => {
-    onCopy()
-    toast({
-      title: "Email copied",
-      position: "top",
-      status: "success",
-      duration: 4000,
-      isClosable: true,
-    })
+    navigator.clipboard.writeText(PROFILE.email)
+    toast.success("Email copied")
   }
 
   if (displayEmail) {
     return (
-      <InputGroup size="md" width={{ base: "100%", sm: "260px" }} mr={2}>
-        <Input value={PROFILE.email} readOnly />
-        <InputRightElement width="4.5rem">
-          <Button h="1.75rem" size="sm" onClick={handleOnCopy}>
-            Copy
-          </Button>
-        </InputRightElement>
-      </InputGroup>
+      <div className="flex w-full sm:w-[260px] mr-2 gap-2">
+        <input
+          value={PROFILE.email}
+          readOnly
+          className="flex-1 px-3 py-2 border border-gray-300 rounded text-sm"
+        />
+        <button
+          type="button"
+          onClick={handleOnCopy}
+          className="px-3 py-1 text-sm border border-gray-300 rounded hover:bg-gray-50"
+        >
+          Copy
+        </button>
+      </div>
     )
   }
+
   return (
-    <>
-      <Button
-        width={{ base: "100%", sm: "auto" }}
-        onClick={() => setDisplayEmail(true)}
-        leftIcon={<FaEnvelope />}
-        mr={2}
-      >
-        Contact via email
-      </Button>
-    </>
+    <button
+      type="button"
+      onClick={() => setDisplayEmail(true)}
+      className="flex items-center gap-2 w-full sm:w-auto px-4 py-2 mr-2 border border-gray-300 rounded hover:bg-gray-50 transition-colors"
+    >
+      <FaEnvelope />
+      Contact via email
+    </button>
   )
 }

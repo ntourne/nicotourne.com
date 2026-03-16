@@ -1,22 +1,19 @@
-import Head from "next/head"
-import { Stack } from "@chakra-ui/react"
 import { Layout } from "@components/layout"
-import { HomeScreen } from "@screens/index"
 import { PROFILE } from "@data/index"
+import { HomeScreen } from "@screens/index"
+import Head from "next/head"
 
 const Home = () => {
+  const title = `${PROFILE.name} - ${PROFILE.title}`
   return (
     <>
       <Head>
-        <title>
-          {PROFILE.name} - {PROFILE.title}
-        </title>
+        <title>{title}</title>
         <meta name="description" content={PROFILE.about} />
       </Head>
-
-      <Stack spacing={2} pb={{ base: 20, sm: 6 }}>
+      <div className="flex flex-col gap-2 pb-20 sm:pb-6">
         <HomeScreen />
-      </Stack>
+      </div>
     </>
   )
 }

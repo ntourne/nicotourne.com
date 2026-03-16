@@ -1,14 +1,10 @@
-import { Flex, Heading, Box } from "@chakra-ui/react";
-
 export const Section = ({ title, children }: any) => {
   return (
-    <Flex direction="column">
+    <div className="flex flex-col">
       {title && (
-        <Heading as="h3" fontSize="1.3em" mb={4}>
-          {title}
-        </Heading>
+        <h3 className="text-[1.3em] font-semibold mb-4">{title}</h3>
       )}
-      {children && <Box>{children}</Box>}
-    </Flex>
-  );
-};
+      {children && <div>{children}</div>}
+    </div>
+  )
+}

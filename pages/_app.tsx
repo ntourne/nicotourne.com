@@ -1,35 +1,15 @@
-import { useEffect } from "react"
-import { useRouter } from "next/router"
+import type { NextPage } from "next"
+import "../styles/globals.css"
 import type { AppProps } from "next/app"
-import { NextPage } from "next"
-import { ChakraProvider, extendTheme } from "@chakra-ui/react"
+import { useRouter } from "next/router"
+import { useEffect } from "react"
+import { Toaster } from "sonner"
 
 export type NextApplicationPage<P = any, IP = P> = NextPage<P, IP> & {
   requireAuth?: boolean
   menu?: string
   getLayout?: any
 }
-
-// 2. Call `extendTheme` and pass your custom values
-const theme = extendTheme({
-  styles: {
-    global: () => ({
-      body: {
-        lineHeight: "base",
-        // bg: mode("gray.100", "gray.600")(props),
-      },
-      a: {
-        fontWeight: "bold",
-        /* color: "#080a87 !important", */
-      },
-    }),
-  },
-  fonts: {
-    heading:
-      "Roboto, Lato, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;",
-    body: "Roboto, Lato, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;",
-  },
-})
 
 function MyApp(props: AppProps) {
   const {
@@ -55,9 +35,10 @@ function MyApp(props: AppProps) {
   }, [router.events])
 
   return (
-    <ChakraProvider theme={theme}>
+    <>
       {getLayout(<Component {...pageProps} />)}
-    </ChakraProvider>
+      <Toaster position="bottom-right" richColors />
+    </>
   )
 }
 

@@ -1,26 +1,27 @@
-import { Flex, Heading, Link, Text } from "@chakra-ui/react"
 import { POSTS } from "@data/posts"
 
 export const Articles = () => {
   return (
-    <Flex direction={"column"} flex="1" mt={12} mb={8}>
-      <Heading as="h3" fontSize={{ base: "1.1em", sm: "1.3em" }} mb={4}>
+    <div className="flex flex-col flex-1 mt-3 mb-8">
+      <h3 className="text-[1.1em] sm:text-[1.3em] font-semibold mb-4">
         Articles ({`I don't write too often`})
-      </Heading>
+      </h3>
       {POSTS.map((post, idx) => (
-        <Flex
-          direction={{ base: "column", sm: "row" }}
+        <div
           key={`post-${idx}`}
-          textAlign="left"
-          width="100%"
-          mb={{ base: 3, sm: 1 }}
+          className="flex flex-col text-left w-full mb-3 sm:flex-row sm:mb-1"
         >
-          <Link href={post.url} isExternal aria-label={post.title}>
-            <Text fontWeight="bold">{post.title}</Text>
-          </Link>{" "}
-          <Text ml={{ base: 0, sm: 2 }}>{post.createdDate}</Text>
-        </Flex>
+          <a
+            href={post.url}
+            aria-label={post.title}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="font-bold">{post.title}</span>
+          </a>{" "}
+          <span className="ml-0 sm:ml-2">{post.createdDate}</span>
+        </div>
       ))}
-    </Flex>
+    </div>
   )
 }

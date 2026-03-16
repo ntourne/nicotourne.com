@@ -4,8 +4,10 @@ import { Markdown } from "."
 
 export const About = () => {
   return (
-    <Section>
-      <Markdown>{PROFILE.about}</Markdown>
-    </Section>
+    <div className="flex flex-col gap-4 mt-3">
+      <Section>
+        <Markdown>{PROFILE.about}</Markdown>
+      </Section>
+    </div>
   )
 }

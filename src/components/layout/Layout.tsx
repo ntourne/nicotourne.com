@@ -1,12 +1,11 @@
-import { Flex, Container, Stack } from "@chakra-ui/react";
-
 export const Layout = (props: { children: any }) => {
-  const { children } = props;
+  const { children } = props
+
   return (
-    <Flex minH="95vh" direction="column" align="center">
-      <Container as={Stack} maxW={"800px"}>
-        {children}
-      </Container>
-    </Flex>
-  );
-};
+    <div className="flex min-h-[95vh] flex-col items-center">
+      <div className="w-full max-w-[800px] px-4">
+        <div className="flex flex-col gap-4">{children}</div>
+      </div>
+    </div>
+  )
+}

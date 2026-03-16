@@ -1,59 +1,40 @@
-import {
-  Flex,
-  Text,
-  Stack,
-  Badge,
-  Box,
-  useColorModeValue,
-} from "@chakra-ui/react";
-import { Section } from "@components/layout";
-import { SKILLS } from "@data/index";
+import { Section } from "@components/layout"
+import { SKILLS } from "@data/index"
 
 export const Skills = () => {
   return (
     <Section title="Main Skills / Interests">
-      <Stack spacing={4}>
-        {SKILLS.map((skill, idx) => (
-          <SkillBox key={idx} skill={skill} />
+      <div className="flex flex-col gap-4">
+        {SKILLS.map((skill) => (
+          <SkillBox key={skill.label} skill={skill} />
         ))}
-      </Stack>
+      </div>
     </Section>
-  );
-};
+  )
+}
 
 const SkillBox = ({ skill }: any) => {
   return (
-    <Flex direction="column">
-      <Flex direction="row" textAlign="left" flex={1}>
-        <Box mr={4}>
-          <Box fontSize="3em">{skill.icon}</Box>
-        </Box>
-        <Box>
-          <Text as="h3" fontSize="1.1em" fontWeight="bold" mb={1}>
-            {skill.label}
-          </Text>
-          <Text mb={1}>{skill.description}</Text>
+    <div className="flex flex-col">
+      <div className="flex flex-row text-left flex-1">
+        <div className="mr-4 text-[3em]">{skill.icon}</div>
+        <div>
+          <h3 className="text-[1.1em] font-bold mb-1">{skill.label}</h3>
+          <p className="mb-1">{skill.description}</p>
           {skill.technologies && (
-            <Box>
-              {skill.technologies.map((technology: string, idx: number) => (
-                <Badge
-                  as="span"
-                  px={2}
-                  py={1}
-                  key={idx}
-                  mb={1}
-                  // eslint-disable-next-line react-hooks/rules-of-hooks
-                  color={useColorModeValue("gray.700", "white.700")}
-                  mr={1}
-                  variant="outline"
+            <div>
+              {skill.technologies.map((technology: string) => (
+                <span
+                  key={`${skill.label}-${technology}`}
+                  className="inline-block px-2 py-1 mb-1 mr-1 text-sm border border-gray-700 text-gray-700 rounded"
                 >
                   {technology}
-                </Badge>
+                </span>
               ))}
-            </Box>
+            </div>
           )}
-        </Box>
-      </Flex>
-    </Flex>
-  );
-};
+        </div>
+      </div>
+    </div>
+  )
+}

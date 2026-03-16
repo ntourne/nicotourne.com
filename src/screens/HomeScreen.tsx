@@ -1,33 +1,26 @@
-import { Stack, Container, Divider } from "@chakra-ui/react"
 import {
-  HeadingCard,
   About,
-  Header,
   Articles,
+  Header,
+  HeadingCard,
   OpenToWorkBanner,
 } from "@components/common"
 import { Card } from "@components/layout"
 
 export const HomeScreen = () => {
   return (
-    <Container
-      maxW="container.xl"
-      px={0}
-      h="100vh"
-      py={4}
-      position="relative"
-      // centerContent
-    >
-      <Card margin="auto">
-        <Stack spacing={6}>
+    <div className="px-0 h-screen py-4 relative">
+      <Card className="mx-auto">
+        <div className="flex flex-col gap-6">
           <OpenToWorkBanner />
           <Header />
           <HeadingCard />
+          <hr className="border-gray-200" />
           <About />
-          <Divider />
+          <hr className="border-gray-200" />
           <Articles />
-        </Stack>
+        </div>
       </Card>
-    </Container>
+    </div>
   )
 }

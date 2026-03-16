@@ -1,12 +1,12 @@
-import { FaLinkedin, FaGithub, FaJsSquare } from "react-icons/fa"
-import { FaXTwitter } from "react-icons/fa6"
 import { BiNetworkChart } from "react-icons/bi"
+import { FaGithub, FaJsSquare, FaLinkedin } from "react-icons/fa"
+import { FaXTwitter } from "react-icons/fa6"
 
 export const PROFILE = {
   name: "Nicolas Tourne",
-  title: "Lead Software Engineer • Full Stack & Web3",
+  title: "Senior Software Engineer • Full Stack & Web3",
   about: `
-Nicolas is a Lead Software Engineer with experience building and leading the development of complex web applications, particularly in Web3 and blockchain ecosystems. He has led technical projects, collaborated with global teams, and delivered scalable products used by thousands of users across different platforms.
+Nicolas is a Senior Software Engineer with experience building and leading the development of complex web applications, particularly in Web3 and blockchain ecosystems. He has led technical projects, collaborated with global teams, and delivered scalable products used by thousands of users across different platforms.
 
 Currently, he works at [Tally](https://www.tally.xyz), where he leads the development of Web3 products including on-chain governance tools for DAOs, airdrop platforms, and token sale infrastructure. He leads the estimation, architecture, and development of these systems, helping organizations launch and operate critical components of their on-chain ecosystems. He has collaborated with major ecosystem teams including ZKsync, Arbitrum, Compound, Wormhole, Uniswap, Hyperlane, and idOS to build and launch governance and token distribution infrastructure.
 

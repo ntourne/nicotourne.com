@@ -1,103 +1,104 @@
-import { useState } from "react";
-import {
-  FormControl,
-  FormLabel,
-  Stack,
-  Input,
-  Textarea,
-  Button,
-  Divider,
-  Box,
-} from "@chakra-ui/react";
-import { Section } from "@components/layout";
-import { sendContact } from "@libs/contact";
-import { useToast } from "@chakra-ui/react";
+import { Section } from "@components/layout"
+import { sendContact } from "@libs/contact"
+import { useState } from "react"
+import { toast } from "sonner"
 
 export const ContactForm = () => {
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const toast = useToast();
+  const [email, setEmail] = useState("")
+  const [subject, setSubject] = useState("")
+  const [message, setMessage] = useState("")
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleSubmit = (event: any) => {
-    setIsSubmitting(true);
+    setIsSubmitting(true)
 
     setTimeout(() => {
       sendContact(email, subject, message)
         .then((data) => {
-          setEmail("");
-          setSubject("");
-          setMessage("");
-          setIsSubmitting(false);
+          setEmail("")
+          setSubject("")
+          setMessage("")
+          setIsSubmitting(false)
 
-          toast({
-            title: data.msg || "Message sent",
+          toast.success(data.msg || "Message sent", {
             description: "I will get back to you as soon as possible",
-            position: "top",
-            status: "success",
-            duration: 4000,
-            isClosable: true,
-          });
+          })
         })
         .catch((err) => {
-          toast({
-            title: err.msg || "Ups... there was an error",
+          toast.error(err.msg || "Ups... there was an error", {
             description: "There are lots of possible situations.",
-            position: "top",
-            status: "error",
-            duration: 4000,
-            isClosable: true,
-          });
+          })
+          setIsSubmitting(false)
+        })
+    }, 3000)
 
-          setIsSubmitting(false);
-        });
-    }, 3000);
+    event.preventDefault()
+  }
 
-    event.preventDefault();
-  };
+  const inputClass =
+    "w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-gray-400"
 
   return (
     <Section title="Contact submitting this form">
       <form onSubmit={handleSubmit}>
-        <Stack direction="column" spacing={3}>
-          <FormControl isRequired id="form-control-email">
-            <FormLabel htmlFor="email">Your email address</FormLabel>
-            <Input
+        <div className="flex flex-col gap-3">
+          <div>
+            <label htmlFor="email" className="block mb-1 text-sm font-medium">
+              Your email address <span className="text-red-500">*</span>
+            </label>
+            <input
               id="email"
               type="email"
+              required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              className={inputClass}
             />
-          </FormControl>
-          <FormControl isRequired id="form-control-subject">
-            <FormLabel htmlFor="subject">Subject</FormLabel>
-            <Input
+          </div>
+          <div>
+            <label
+              htmlFor="subject"
+              className="block mb-1 text-sm font-medium"
+            >
+              Subject <span className="text-red-500">*</span>
+            </label>
+            <input
               id="subject"
               type="text"
+              required
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
+              className={inputClass}
             />
-          </FormControl>
-          <FormControl id="form-control-message">
-            <FormLabel htmlFor="message">Message</FormLabel>
-            <Textarea
+          </div>
+          <div>
+            <label
+              htmlFor="message"
+              className="block mb-1 text-sm font-medium"
+            >
+              Message
+            </label>
+            <textarea
               id="message"
               value={message}
+              rows={5}
               onChange={(e) => setMessage(e.target.value)}
+              className={inputClass}
             />
-          </FormControl>
-          <Button mt={4} isLoading={isSubmitting} type="submit">
-            Submit
-          </Button>
-        </Stack>
+          </div>
+          <button
+            type="submit"
+            disabled={isSubmitting}
+            className="mt-4 px-4 py-2 border border-gray-300 rounded hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          >
+            {isSubmitting ? "Submitting..." : "Submit"}
+          </button>
+        </div>
       </form>
-
-      <Divider py={4} />
-
-      <Box fontSize="1.2em" pt={8}>
+      <hr className="my-4 border-gray-200" />
+      <div className="text-[1.2em] pt-8">
         ... or just send an email to nicotourne [at] gmail.com
-      </Box>
+      </div>
     </Section>
-  );
-};
+  )
+}

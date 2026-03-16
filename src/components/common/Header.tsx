@@ -1,46 +1,14 @@
-import { useState } from "react"
-
-import { Flex, useColorMode, Button, Spacer, Box } from "@chakra-ui/react"
 import { SocialMedia } from "@components/common"
-import { FaSun, FaMoon } from "react-icons/fa"
 import { ContactEmail } from "."
 
-export const Header = ({ isBack }: any) => {
-  const { colorMode, toggleColorMode } = useColorMode()
+export const Header = () => {
   return (
-    <Flex direction="row" align="center" mb={{ base: 2, sm: 6 }}>
-      {/*
-      {isBack ? (
-        <Link href="/" passHref>
-          <a>
-            <Button leftIcon={<FaChevronLeft />}>Home</Button>
-          </a>
-        </Link>
-      ) : (
-        <SocialMedia />
-      )}
-
-      <Spacer />
-      {!isBack && (
-        <Link href="/contact" passHref>
-          <a>
-            <Button leftIcon={<FaEnvelope />} mr={2}>
-              Contact me
-            </Button>
-          </a>
-        </Link>
-      )}
-      */}
-
+    <div className="flex flex-row items-center mb-2 sm:mb-6">
       <SocialMedia />
-      <Spacer />
-
-      <Box display={{ base: "none", sm: "block" }}>
+      <div className="flex-1" />
+      <div className="hidden sm:block">
         <ContactEmail />
-      </Box>
-      <Button onClick={toggleColorMode} aria-label="Switch light/dark mode">
-        {colorMode === "light" ? <FaMoon /> : <FaSun />}
-      </Button>
-    </Flex>
+      </div>
+    </div>
   )
 }

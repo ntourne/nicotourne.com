@@ -1,5 +1,4 @@
-import React from "react"
-import Document, { Html, Head, Main, NextScript } from "next/document"
+import Document, { Head, Html, Main, NextScript } from "next/document"
 
 export default class MyDocument extends Document {
   render() {
@@ -101,7 +100,7 @@ export default class MyDocument extends Document {
           />
 
           <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&display=swap"
             rel="stylesheet"
           />
         </Head>
