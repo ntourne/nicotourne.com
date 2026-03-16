@@ -4,19 +4,15 @@ import { BiNetworkChart } from "react-icons/bi"
 
 export const PROFILE = {
   name: "Nicolas Tourne",
-  title: "Web3 Engineer (and curious)",
+  title: "Lead Software Engineer • Full Stack & Web3",
   about: `
-  Hey 👋  Thanks for visiting my website.
+Nicolas is a Lead Software Engineer with experience building and leading the development of complex web applications, particularly in Web3 and blockchain ecosystems. He has led technical projects, collaborated with global teams, and delivered scalable products used by thousands of users across different platforms.
 
-I'm a software engineer with experience in creating and managing highly technical web applications and development teams across multiple projects and platforms.
+Currently, he works at [Tally](https://www.tally.xyz), where he leads the development of Web3 products including on-chain governance tools for DAOs, airdrop platforms, and token sale infrastructure. He leads the estimation, architecture, and development of these systems, helping organizations launch and operate critical components of their on-chain ecosystems. He has collaborated with major ecosystem teams including ZKsync, Arbitrum, Compound, Wormhole, Uniswap, Hyperlane, and idOS to build and launch governance and token distribution infrastructure.
 
-CTO and Co-Founder at [BeeReal](https://beerealit.com), a digital agency focused on scalable and user-friendly products. At BeeReal, I have worked with many different companies, helping them to launch their digital products from vision to delivery.
+Previously, Nicolas served as CTO and Co-Founder of [BeeReal](https://beerealit.com), a digital agency focused on building scalable and user-friendly digital products. He also co-founded [TidyMktr](https://www.youtube.com/watch?v=Jok0wo13cD4&ab_channel=LAUNCHConf), a digital marketing SaaS platform incubated by LAUNCH Incubator, and [Buscarg](https://twitter.com/buscarg), a business directory platform.
 
-Currently, I'm working as a Web3 engineer at [Tally](https://www.tally.xyz), which is a platform for onchain decentralized organizations (DAOs).
-
-In the past, I co-founded [TidyMktr](https://www.youtube.com/watch?v=Jok0wo13cD4&ab_channel=LAUNCHConf), a digital marketing SaaS tool that was incubated by LAUNCH Incubator, and [Buscarg](https://twitter.com/buscarg), a business directory site.
-
-Additionally, I am a Software Engineer with an MBA from UNICEN and a university professor. I am currently based in Argentina 🇦🇷
+In addition to his industry work, Nicolas holds an MBA from UNICEN, teaches as a university professor, and is currently based in Argentina 🇦🇷.
   `,
   avatarUrl: "/img/about/profile-avatar.jpeg",
   email: "nicotourne@gmail.com",

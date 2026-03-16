@@ -1,5 +1,11 @@
 export const POSTS = [
   {
+    title:
+      "The Web Was Just the Rehearsal: How Agents Will Rewrite the Internet ",
+    url: "https://x.com/nicotourne/status/2031369137813905685",
+    createdDate: "Mar 10, 2026",
+  },
+  {
     title: "Exploring Real World Assets (RWA)",
     url: "https://medium.com/@nicotourne/exploring-real-world-assets-rwa-bridging-traditional-and-digital-economies-edaa73dc3816",
     createdDate: "Apr 21, 2024",

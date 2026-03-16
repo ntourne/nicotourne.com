@@ -12,6 +12,7 @@ import { WebsiteButtons } from "./WebsiteButtons"
 import { Markdown } from "./Markdown"
 import { Language } from "./Language"
 import { Articles } from "./Articles"
+import { OpenToWorkBanner } from "./OpenToWorkBanner"
 
 export {
   About,
@@ -28,4 +29,5 @@ export {
   Language,
   WebsiteButtons,
   Articles,
+  OpenToWorkBanner,
 }
