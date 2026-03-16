@@ -1,30 +1,12 @@
-import { Badge, Flex, Text } from "@chakra-ui/react"
-
 export const OpenToWorkBanner = () => {
   return (
-    <Flex
-      align={{ base: "flex-start", sm: "center" }}
-      justify="space-between"
-      direction={{ base: "column", sm: "row" }}
-      gap={3}
-      px={4}
-      py={3}
-      borderRadius="lg"
-      borderWidth="1px"
-      borderColor="green.200"
-      bg="green.50"
-      color="green.900"
-    >
-      <Flex
-        align={{ base: "flex-start", sm: "center" }}
-        direction={{ base: "column", sm: "row" }}
-        gap={3}
-      >
-        <Badge colorScheme="green" px={2} py={1} borderRadius="md">
+    <div className="flex flex-col gap-3 px-4 py-3 rounded-lg border border-green-200 bg-green-50 text-green-900 sm:flex-row sm:items-center sm:justify-between">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+        <span className="inline-block px-2 py-1 rounded-md bg-green-100 text-green-800 text-sm font-semibold">
           Open to work
-        </Badge>
-        <Text fontWeight="semibold">Available for remote opportunities.</Text>
-      </Flex>
-    </Flex>
+        </span>
+        <p className="font-semibold">Available for remote opportunities.</p>
+      </div>
+    </div>
   )
 }

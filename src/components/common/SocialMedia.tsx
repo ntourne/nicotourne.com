@@ -1,32 +1,26 @@
-import { Box, Flex, Link, Text } from "@chakra-ui/react"
-import { Section } from "@components/layout"
 import { SOCIAL_MEDIA } from "@data/index"
 
 export const SocialMedia = () => {
   return (
-    <Section>
-      <Flex direction="row">
+    <div>
+      <div className="flex flex-row">
         {SOCIAL_MEDIA.map((item: any) => (
-          <Flex direction="row" align="center" mr={4} key={item.label}>
-            <Link
+          <div key={item.label} className="flex flex-row items-center mr-4">
+            <a
               href={item.url}
               aria-label={item.label}
-              target='_blank'
-              rel='noopener noreferrer'>
-              <Flex direction="row" align="center">
-                {item.icon && (
-                  <Box mr={2} fontSize="1.5em">
-                    {item.icon}
-                  </Box>
-                )}
-                <Text display={{ base: "none", sm: "block" }}>
-                  {item.label}
-                </Text>
-              </Flex>
-            </Link>
-          </Flex>
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-row items-center"
+            >
+              {item.icon && (
+                <span className="mr-2 text-[1.5em]">{item.icon}</span>
+              )}
+              <span className="hidden sm:block">{item.label}</span>
+            </a>
+          </div>
         ))}
-      </Flex>
-    </Section>
-  );
+      </div>
+    </div>
+  )
 }

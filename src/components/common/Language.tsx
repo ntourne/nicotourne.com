@@ -1,23 +1,17 @@
-import { Flex, Stack, Text } from "@chakra-ui/react"
-import { Section } from "@components/layout";
-import { LANGUAGES } from "@data/index";
+import { Section } from "@components/layout"
+import { LANGUAGES } from "@data/index"
 
 export const Language = () => {
   return (
     <Section title="Language">
-      <Stack gap={4}>
+      <div className="flex flex-col gap-4">
         {LANGUAGES.map((language) => (
-          <Flex
-            direction="column"
-            key={language.label}
-            textAlign="left"
-            width="100%"
-          >
-            <Text fontWeight="bold">{language.label}</Text>
-            <Text>{language.description}</Text>
-          </Flex>
+          <div key={language.label} className="flex flex-col text-left w-full">
+            <p className="font-bold">{language.label}</p>
+            <p>{language.description}</p>
+          </div>
         ))}
-      </Stack>
+      </div>
     </Section>
-  );
-};
+  )
+}

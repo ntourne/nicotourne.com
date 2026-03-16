@@ -1,4 +1,3 @@
-import { Container, Separator, Stack } from "@chakra-ui/react"
 import {
   About,
   Articles,
@@ -10,24 +9,18 @@ import { Card } from "@components/layout"
 
 export const HomeScreen = () => {
   return (
-    <Container
-      maxW="container.xl"
-      px={0}
-      h="100vh"
-      py={4}
-      position="relative"
-      // centerContent
-    >
-      <Card margin="auto">
-        <Stack gap={6}>
+    <div className="px-0 h-screen py-4 relative">
+      <Card className="mx-auto">
+        <div className="flex flex-col gap-6">
           <OpenToWorkBanner />
           <Header />
           <HeadingCard />
+          <hr className="border-gray-200" />
           <About />
-          <Separator />
+          <hr className="border-gray-200" />
           <Articles />
-        </Stack>
+        </div>
       </Card>
-    </Container>
-  );
+    </div>
+  )
 }

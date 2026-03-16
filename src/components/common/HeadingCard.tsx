@@ -1,51 +1,38 @@
-import { Box, Flex, Heading, Image, Spacer } from "@chakra-ui/react"
 import { PROFILE } from "@data/index"
+import NextImage from "next/image"
 import { ContactEmail } from "."
 
 export const HeadingCard = () => {
   return (
-    <Flex
-      direction={["column", "row"]}
-      flex="1"
-      mt={12}
-      mb={8}
-      align={{ base: "left", sm: "center" }}
-    >
-      <Box display={{ base: "block", sm: "none" }} mb={3}>
+    <div className="flex flex-col mb-3 sm:flex-row sm:items-center">
+      <div className="block sm:hidden mb-3">
         <Avatar />
-      </Box>
-      <Flex direction="column">
-        <Heading as="h1" fontSize={{ base: "2em", sm: "2.5em" }}>
-          {PROFILE.name}
-        </Heading>
-        <Heading
-          as="h2"
-          fontSize={{ base: "1.2em", sm: "1.5em" }}
-          mt={{ base: 0, sm: 2 }}
-        >
+      </div>
+      <div className="flex flex-col">
+        <h1 className="text-[2em] sm:text-[2.5em] font-bold">{PROFILE.name}</h1>
+        <h2 className="text-[1.2em] sm:text-[1.5em] mt-0 sm:mt-2">
           {PROFILE.title}
-        </Heading>
-      </Flex>
-      <Spacer />
-      <Box display={{ base: "none", sm: "block" }}>
+        </h2>
+      </div>
+      <div className="flex-1" />
+      <div className="hidden sm:block">
         <Avatar />
-      </Box>
-
-      <Box display={{ base: "block", sm: "none" }} mt={4}>
+      </div>
+      <div className="block sm:hidden mt-4">
         <ContactEmail />
-      </Box>
-    </Flex>
+      </div>
+    </div>
   )
 }
 
 const Avatar = () => {
   return (
-    <Image
+    <NextImage
       src={PROFILE.avatarUrl}
-      borderRadius="8px"
       alt={`Avatar from ${PROFILE.name}`}
-      height="80px"
-      width="80px"
+      height={80}
+      width={80}
+      className="rounded-[8px]"
     />
   )
 }

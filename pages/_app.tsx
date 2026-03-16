@@ -1,8 +1,9 @@
-import { Provider } from "@components/ui/provider"
 import type { NextPage } from "next"
+import "../styles/globals.css"
 import type { AppProps } from "next/app"
 import { useRouter } from "next/router"
 import { useEffect } from "react"
+import { Toaster } from "sonner"
 
 export type NextApplicationPage<P = any, IP = P> = NextPage<P, IP> & {
   requireAuth?: boolean
@@ -34,9 +35,10 @@ function MyApp(props: AppProps) {
   }, [router.events])
 
   return (
-    <Provider>
+    <>
       {getLayout(<Component {...pageProps} />)}
-    </Provider>
+      <Toaster position="bottom-right" richColors />
+    </>
   )
 }
 

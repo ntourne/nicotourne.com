@@ -1,8 +1,7 @@
-import { Box, Button, Field, Input, Separator, Stack, Textarea } from "@chakra-ui/react"
 import { Section } from "@components/layout"
 import { sendContact } from "@libs/contact"
 import { useState } from "react"
-import { toaster } from "../ui/toaster"
+import { toast } from "sonner"
 
 export const ContactForm = () => {
   const [email, setEmail] = useState("")
@@ -21,19 +20,14 @@ export const ContactForm = () => {
           setMessage("")
           setIsSubmitting(false)
 
-          toaster.create({
-            title: data.msg || "Message sent",
+          toast.success(data.msg || "Message sent", {
             description: "I will get back to you as soon as possible",
-            type: "success",
           })
         })
         .catch((err) => {
-          toaster.create({
-            title: err.msg || "Ups... there was an error",
+          toast.error(err.msg || "Ups... there was an error", {
             description: "There are lots of possible situations.",
-            type: "error",
           })
-
           setIsSubmitting(false)
         })
     }, 3000)
@@ -41,45 +35,70 @@ export const ContactForm = () => {
     event.preventDefault()
   }
 
+  const inputClass =
+    "w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-gray-400"
+
   return (
     <Section title="Contact submitting this form">
       <form onSubmit={handleSubmit}>
-        <Stack direction="column" gap={3}>
-          <Field.Root required id="form-control-email">
-            <Field.Label htmlFor="email">Your email address</Field.Label>
-            <Input
+        <div className="flex flex-col gap-3">
+          <div>
+            <label htmlFor="email" className="block mb-1 text-sm font-medium">
+              Your email address <span className="text-red-500">*</span>
+            </label>
+            <input
               id="email"
               type="email"
+              required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              className={inputClass}
             />
-          </Field.Root>
-          <Field.Root required id="form-control-subject">
-            <Field.Label htmlFor="subject">Subject</Field.Label>
-            <Input
+          </div>
+          <div>
+            <label
+              htmlFor="subject"
+              className="block mb-1 text-sm font-medium"
+            >
+              Subject <span className="text-red-500">*</span>
+            </label>
+            <input
               id="subject"
               type="text"
+              required
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
+              className={inputClass}
             />
-          </Field.Root>
-          <Field.Root id="form-control-message">
-            <Field.Label htmlFor="message">Message</Field.Label>
-            <Textarea
+          </div>
+          <div>
+            <label
+              htmlFor="message"
+              className="block mb-1 text-sm font-medium"
+            >
+              Message
+            </label>
+            <textarea
               id="message"
               value={message}
+              rows={5}
               onChange={(e) => setMessage(e.target.value)}
+              className={inputClass}
             />
-          </Field.Root>
-          <Button mt={4} loading={isSubmitting} type="submit">
-            Submit
-          </Button>
-        </Stack>
+          </div>
+          <button
+            type="submit"
+            disabled={isSubmitting}
+            className="mt-4 px-4 py-2 border border-gray-300 rounded hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          >
+            {isSubmitting ? "Submitting..." : "Submit"}
+          </button>
+        </div>
       </form>
-      <Separator my={4} />
-      <Box fontSize="1.2em" pt={8}>
+      <hr className="my-4 border-gray-200" />
+      <div className="text-[1.2em] pt-8">
         ... or just send an email to nicotourne [at] gmail.com
-      </Box>
+      </div>
     </Section>
   )
 }

@@ -1,19 +1,14 @@
-import { Box, type BoxProps } from "@chakra-ui/react"
 import type { FC, ReactNode } from "react"
 
 type Props = {
   children: ReactNode
+  className?: string
 }
-export const Card: FC<Props & BoxProps> = ({ children, ...props }) => {
+
+export const Card: FC<Props> = ({ children, className = "" }) => {
   return (
-    <Box
-      w={"full"}
-      rounded={"lg"}
-      py={{ base: 1, sm: 6 }}
-      px={{ base: 1, sm: 8 }}
-      {...props}
-    >
+    <div className={`w-full rounded-lg py-1 px-1 sm:py-6 sm:px-8 ${className}`}>
       {children}
-    </Box>
+    </div>
   )
 }

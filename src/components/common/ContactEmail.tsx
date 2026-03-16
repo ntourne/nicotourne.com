@@ -1,39 +1,43 @@
-import { Button, Flex, Input, useClipboard } from "@chakra-ui/react"
 import { PROFILE } from "@data/index"
 import { useState } from "react"
 import { FaEnvelope } from "react-icons/fa"
-import { toaster } from "../ui/toaster"
+import { toast } from "sonner"
 
 export const ContactEmail = () => {
   const [displayEmail, setDisplayEmail] = useState(false)
-  const clipboard = useClipboard({ value: PROFILE.email })
 
   const handleOnCopy = () => {
-    clipboard.copy()
-    toaster.create({
-      title: "Email copied",
-      type: "success",
-    })
+    navigator.clipboard.writeText(PROFILE.email)
+    toast.success("Email copied")
   }
 
   if (displayEmail) {
     return (
-      <Flex width={{ base: "100%", sm: "260px" }} mr={2} gap={2}>
-        <Input value={PROFILE.email} readOnly />
-        <Button size="sm" onClick={handleOnCopy}>
+      <div className="flex w-full sm:w-[260px] mr-2 gap-2">
+        <input
+          value={PROFILE.email}
+          readOnly
+          className="flex-1 px-3 py-2 border border-gray-300 rounded text-sm"
+        />
+        <button
+          type="button"
+          onClick={handleOnCopy}
+          className="px-3 py-1 text-sm border border-gray-300 rounded hover:bg-gray-50"
+        >
           Copy
-        </Button>
-      </Flex>
+        </button>
+      </div>
     )
   }
+
   return (
-    <Button
-      width={{ base: "100%", sm: "auto" }}
+    <button
+      type="button"
       onClick={() => setDisplayEmail(true)}
-      mr={2}
+      className="flex items-center gap-2 w-full sm:w-auto px-4 py-2 mr-2 border border-gray-300 rounded hover:bg-gray-50 transition-colors"
     >
       <FaEnvelope />
       Contact via email
-    </Button>
+    </button>
   )
 }

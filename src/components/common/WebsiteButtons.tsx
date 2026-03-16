@@ -1,24 +1,22 @@
-import { Button, Flex } from "@chakra-ui/react"
 import { FaExternalLinkAlt } from "react-icons/fa"
 
 export const WebsiteButtons = ({ websites }: any) => {
   if (!websites) return null
 
   return (
-    <Flex direction="column" align="left">
+    <div className="flex flex-col items-start">
       {websites.map((website: any) => (
-        <Button
+        <a
           key={website.url}
-          asChild
-          mb={1}
-          width={{ base: "100%", sm: "auto" }}
+          href={website.url}
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex items-center gap-2 mb-1 px-4 py-2 rounded border border-gray-300 hover:bg-gray-50 transition-colors w-full sm:w-auto"
         >
-          <a href={website.url} target="_blank" rel="noreferrer">
-            {website.label}
-            <FaExternalLinkAlt />
-          </a>
-        </Button>
+          {website.label}
+          <FaExternalLinkAlt className="text-sm" />
+        </a>
       ))}
-    </Flex>
+    </div>
   )
 }

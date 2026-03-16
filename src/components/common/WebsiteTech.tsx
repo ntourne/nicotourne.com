@@ -1,25 +1,31 @@
-import { Box, Link, Separator } from "@chakra-ui/react"
-
 export const WebsiteTech = () => {
   return (
-    <Box py={8}>
-      <Separator />
-      <Box fontSize="sm" mt={4}>
+    <div className="py-8">
+      <hr className="border-gray-200" />
+      <p className="text-sm mt-4">
         This website is built using{" "}
-        <Link href="https://nextjs.org/" target='_blank' rel='noopener noreferrer'>
+        <a href="https://nextjs.org/" target="_blank" rel="noopener noreferrer">
           Next.js
-        </Link>{" "}
+        </a>{" "}
         and{" "}
-        <Link href="https://chakra-ui.com/" target='_blank' rel='noopener noreferrer'>
-          Chakra UI
-        </Link>
-      </Box>
-      <Box fontSize="sm">
+        <a
+          href="https://tailwindcss.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Tailwind CSS
+        </a>
+      </p>
+      <p className="text-sm">
         Deployed by{" "}
-        <Link href="https://vercel.com/" target='_blank' rel='noopener noreferrer'>
+        <a
+          href="https://vercel.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Vercel
-        </Link>
-      </Box>
-    </Box>
-  );
-};
+        </a>
+      </p>
+    </div>
+  )
+}
