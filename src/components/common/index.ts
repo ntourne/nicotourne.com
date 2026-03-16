@@ -1,33 +1,33 @@
 import { About } from "./About"
-import { ContactForm } from "./ContactForm"
+import { Articles } from "./Articles"
 import { ContactEmail } from "./ContactEmail"
+import { ContactForm } from "./ContactForm"
+import { Education } from "./Education"
 import { Experience } from "./Experience"
 import { Header } from "./Header"
 import { HeadingCard } from "./HeadingCard"
-import { SocialMedia } from "./SocialMedia"
-import { Skills } from "./Skills"
-import { Education } from "./Education"
-import { WebsiteTech } from "./WebsiteTech"
-import { WebsiteButtons } from "./WebsiteButtons"
-import { Markdown } from "./Markdown"
 import { Language } from "./Language"
-import { Articles } from "./Articles"
+import { Markdown } from "./Markdown"
 import { OpenToWorkBanner } from "./OpenToWorkBanner"
+import { Skills } from "./Skills"
+import { SocialMedia } from "./SocialMedia"
+import { WebsiteButtons } from "./WebsiteButtons"
+import { WebsiteTech } from "./WebsiteTech"
 
 export {
   About,
-  ContactForm,
+  Articles,
   ContactEmail,
+  ContactForm,
+  Education,
   Experience,
   Header,
   HeadingCard,
-  SocialMedia,
-  Skills,
-  Education,
-  WebsiteTech,
-  Markdown,
   Language,
-  WebsiteButtons,
-  Articles,
+  Markdown,
   OpenToWorkBanner,
+  Skills,
+  SocialMedia,
+  WebsiteButtons,
+  WebsiteTech,
 }

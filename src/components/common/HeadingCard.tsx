@@ -1,4 +1,4 @@
-import { Flex, Box, Heading, Spacer, Image } from "@chakra-ui/react"
+import { Box, Flex, Heading, Image, Spacer } from "@chakra-ui/react"
 import { PROFILE } from "@data/index"
 import { ContactEmail } from "."
 

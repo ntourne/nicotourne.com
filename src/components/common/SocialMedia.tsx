@@ -8,7 +8,11 @@ export const SocialMedia = () => {
       <Flex direction="row">
         {SOCIAL_MEDIA.map((item: any) => (
           <Flex direction="row" align="center" mr={4} key={item.label}>
-            <Link href={item.url} isExternal aria-label={item.label}>
+            <Link
+              href={item.url}
+              aria-label={item.label}
+              target='_blank'
+              rel='noopener noreferrer'>
               <Flex direction="row" align="center">
                 {item.icon && (
                   <Box mr={2} fontSize="1.5em">
@@ -24,5 +28,5 @@ export const SocialMedia = () => {
         ))}
       </Flex>
     </Section>
-  )
+  );
 }

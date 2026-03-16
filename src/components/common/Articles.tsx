@@ -15,12 +15,16 @@ export const Articles = () => {
           width="100%"
           mb={{ base: 3, sm: 1 }}
         >
-          <Link href={post.url} isExternal aria-label={post.title}>
+          <Link
+            href={post.url}
+            aria-label={post.title}
+            target='_blank'
+            rel='noopener noreferrer'>
             <Text fontWeight="bold">{post.title}</Text>
           </Link>{" "}
           <Text ml={{ base: 0, sm: 2 }}>{post.createdDate}</Text>
         </Flex>
       ))}
     </Flex>
-  )
+  );
 }

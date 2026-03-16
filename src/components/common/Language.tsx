@@ -1,11 +1,11 @@
-import { Flex, Text, Stack } from "@chakra-ui/react";
+import { Flex, Stack, Text } from "@chakra-ui/react"
 import { Section } from "@components/layout";
 import { LANGUAGES } from "@data/index";
 
 export const Language = () => {
   return (
     <Section title="Language">
-      <Stack spacing={4}>
+      <Stack gap={4}>
         {LANGUAGES.map((language) => (
           <Flex
             direction="column"

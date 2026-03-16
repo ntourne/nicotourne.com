@@ -1,6 +1,6 @@
-import { FaLinkedin, FaGithub, FaJsSquare } from "react-icons/fa"
-import { FaXTwitter } from "react-icons/fa6"
 import { BiNetworkChart } from "react-icons/bi"
+import { FaGithub, FaJsSquare, FaLinkedin } from "react-icons/fa"
+import { FaXTwitter } from "react-icons/fa6"
 
 export const PROFILE = {
   name: "Nicolas Tourne",

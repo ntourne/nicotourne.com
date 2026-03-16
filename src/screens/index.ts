@@ -1,4 +1,4 @@
-import { HomeScreen } from './HomeScreen';
 import { ContactScreen } from './ContactScreen';
+import { HomeScreen } from './HomeScreen';
 
-export { HomeScreen, ContactScreen };
+export { ContactScreen, HomeScreen };

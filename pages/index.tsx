@@ -1,8 +1,8 @@
-import Head from "next/head"
 import { Stack } from "@chakra-ui/react"
 import { Layout } from "@components/layout"
-import { HomeScreen } from "@screens/index"
 import { PROFILE } from "@data/index"
+import { HomeScreen } from "@screens/index"
+import Head from "next/head"
 
 const Home = () => {
   return (
@@ -13,12 +13,11 @@ const Home = () => {
         </title>
         <meta name="description" content={PROFILE.about} />
       </Head>
-
-      <Stack spacing={2} pb={{ base: 20, sm: 6 }}>
+      <Stack gap={2} pb={{ base: 20, sm: 6 }}>
         <HomeScreen />
       </Stack>
     </>
-  )
+  );
 }
 
 Home.menu = "home"

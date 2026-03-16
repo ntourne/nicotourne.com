@@ -1,4 +1,4 @@
-import { Flex, Heading, Box } from "@chakra-ui/react";
+import { Box, Flex, Heading } from "@chakra-ui/react"
 
 export const Section = ({ title, children }: any) => {
   return (

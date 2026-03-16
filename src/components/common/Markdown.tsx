@@ -1,6 +1,6 @@
 import { Link, Text } from "@chakra-ui/react"
-import ReactMarkdown from "react-markdown"
 import ChakraUIRenderer from "chakra-ui-markdown-renderer"
+import ReactMarkdown from "react-markdown"
 
 export const Markdown = ({ children, fontSize }: any) => {
   const newTheme = {
@@ -15,10 +15,10 @@ export const Markdown = ({ children, fontSize }: any) => {
     a: (props: any) => {
       const { children, href } = props
       return (
-        <Link href={href} isExternal>
+        <Link href={href} target='_blank' rel='noopener noreferrer'>
           {children}
         </Link>
-      )
+      );
     },
   }
 

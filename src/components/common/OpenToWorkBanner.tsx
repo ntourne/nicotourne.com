@@ -1,5 +1,4 @@
 import { Badge, Flex, Text } from "@chakra-ui/react"
-import { FaBriefcase } from "react-icons/fa"
 
 export const OpenToWorkBanner = () => {
   return (

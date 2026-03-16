@@ -1,27 +1,23 @@
-import {
-  Flex,
-  Text,
-  Stack,
-  Badge,
-  Box,
-  useColorModeValue,
-} from "@chakra-ui/react";
-import { Section } from "@components/layout";
-import { SKILLS } from "@data/index";
+import { Badge, Box, Flex, Stack, Text } from "@chakra-ui/react"
+import { Section } from "@components/layout"
+import { SKILLS } from "@data/index"
+import { useColorModeValue } from "../ui/color-mode";
 
 export const Skills = () => {
   return (
     <Section title="Main Skills / Interests">
-      <Stack spacing={4}>
-        {SKILLS.map((skill, idx) => (
-          <SkillBox key={idx} skill={skill} />
+      <Stack gap={4}>
+        {SKILLS.map((skill) => (
+          <SkillBox key={skill.label} skill={skill} />
         ))}
       </Stack>
     </Section>
   );
-};
+}
 
 const SkillBox = ({ skill }: any) => {
+  const badgeColor = useColorModeValue("gray.700", "white.700")
+
   return (
     <Flex direction="column">
       <Flex direction="row" textAlign="left" flex={1}>
@@ -35,15 +31,14 @@ const SkillBox = ({ skill }: any) => {
           <Text mb={1}>{skill.description}</Text>
           {skill.technologies && (
             <Box>
-              {skill.technologies.map((technology: string, idx: number) => (
+              {skill.technologies.map((technology: string) => (
                 <Badge
                   as="span"
                   px={2}
                   py={1}
-                  key={idx}
+                  key={`${skill.label}-${technology}`}
                   mb={1}
-                  // eslint-disable-next-line react-hooks/rules-of-hooks
-                  color={useColorModeValue("gray.700", "white.700")}
+                  color={badgeColor}
                   mr={1}
                   variant="outline"
                 >
@@ -55,5 +50,5 @@ const SkillBox = ({ skill }: any) => {
         </Box>
       </Flex>
     </Flex>
-  );
-};
+  )
+}

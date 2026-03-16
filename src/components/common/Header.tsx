@@ -1,11 +1,10 @@
-import { useState } from "react"
-
-import { Flex, useColorMode, Button, Spacer, Box } from "@chakra-ui/react"
+import { Box, Button, Flex, Spacer } from "@chakra-ui/react"
 import { SocialMedia } from "@components/common"
-import { FaSun, FaMoon } from "react-icons/fa"
+import { FaMoon, FaSun } from "react-icons/fa"
+import { useColorMode } from "../ui/color-mode"
 import { ContactEmail } from "."
 
-export const Header = ({ isBack }: any) => {
+export const Header = () => {
   const { colorMode, toggleColorMode } = useColorMode()
   return (
     <Flex direction="row" align="center" mb={{ base: 2, sm: 6 }}>

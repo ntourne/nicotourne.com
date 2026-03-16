@@ -1,5 +1,5 @@
-import { FC, ReactNode } from "react"
-import { Box, BoxProps } from "@chakra-ui/react"
+import { Box, type BoxProps } from "@chakra-ui/react"
+import type { FC, ReactNode } from "react"
 
 type Props = {
   children: ReactNode
