@@ -12,7 +12,7 @@ export const HomeScreen = () => {
     <div className="px-0 h-screen py-4 relative">
       <Card className="mx-auto">
         <div className="flex flex-col gap-6">
-          <OpenToWorkBanner />
+          {/* <OpenToWorkBanner /> */}
           <Header />
           <HeadingCard />
           <hr className="border-gray-200" />
