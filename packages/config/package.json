@@ -1,0 +1,15 @@
+{
+  "name": "@nicotourne/config",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./tsconfig/base": "./tsconfig/base.json",
+    "./tsconfig/nextjs": "./tsconfig/nextjs.json",
+    "./tailwind": "./tailwind/preset.ts"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3",
+    "typescript": "5.4.5"
+  }
+}

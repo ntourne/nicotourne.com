@@ -1,0 +1,13 @@
+{
+  "name": "@nicotourne/lib",
+  "version": "0.0.1",
+  "private": true,
+  "exports": {
+    "./api": "./src/api.ts",
+    "./contact": "./src/contact.ts",
+    ".": "./src/index.ts"
+  },
+  "devDependencies": {
+    "typescript": "5.4.5"
+  }
+}
