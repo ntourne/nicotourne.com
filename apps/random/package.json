@@ -1,0 +1,26 @@
+{
+  "name": "@nicotourne/random",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3002",
+    "build": "next build",
+    "start": "next start -p 3002",
+    "lint": "biome lint .",
+    "lint:fix": "biome check --write ."
+  },
+  "dependencies": {
+    "next": "16.1.6",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "@nicotourne/ui": "workspace:*"
+  },
+  "devDependencies": {
+    "@nicotourne/config": "workspace:*",
+    "@types/node": "25.5.0",
+    "@types/react": "18.2.79",
+    "autoprefixer": "^10.4.27",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^3",
+    "typescript": "5.4.5"
+  }
+}

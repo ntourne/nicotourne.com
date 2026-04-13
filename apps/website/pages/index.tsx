@@ -1,0 +1,25 @@
+import { Layout } from "@nicotourne/ui/layout"
+import { PROFILE } from "@nicotourne/data/profile"
+import { HomeScreen } from "@screens/index"
+import Head from "next/head"
+
+const Home = () => {
+  const title = `${PROFILE.name} - ${PROFILE.title}`
+  return (
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={PROFILE.about} />
+      </Head>
+      <div className="flex flex-col gap-2 pb-20 sm:pb-6">
+        <HomeScreen />
+      </div>
+    </>
+  )
+}
+
+Home.menu = "home"
+
+Home.getLayout = (page: any) => <Layout>{page}</Layout>
+
+export default Home

@@ -1,0 +1,13 @@
+{
+  "extends": "../../packages/config/tsconfig/nextjs.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@components/common": ["./src/components/common/index.ts"],
+      "@components/common/*": ["./src/components/common/*"],
+      "@screens/*": ["./src/screens/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}

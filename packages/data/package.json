@@ -1,0 +1,20 @@
+{
+  "name": "@nicotourne/data",
+  "version": "0.0.1",
+  "private": true,
+  "exports": {
+    "./profile": "./src/index.tsx",
+    "./posts": "./src/posts.tsx",
+    ".": "./src/index.ts"
+  },
+  "peerDependencies": {
+    "react": "18.3.1"
+  },
+  "dependencies": {
+    "react-icons": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "18.2.79",
+    "typescript": "5.4.5"
+  }
+}
