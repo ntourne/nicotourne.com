@@ -1,7 +1,12 @@
 export const POSTS = [
   {
+    title: "Agent Harness: Taming the Wild AI Agent",
+    url: "https://x.com/nicotourne/status/2048369193972559877",
+    createdDate: "Apr 26, 2026",
+  },
+  {
     title:
-      "The Web Was Just the Rehearsal: How Agents Will Rewrite the Internet ",
+      "The Web Was Just the Rehearsal: How Agents Will Rewrite the Internet",
     url: "https://x.com/nicotourne/status/2031369137813905685",
     createdDate: "Mar 10, 2026",
   },
